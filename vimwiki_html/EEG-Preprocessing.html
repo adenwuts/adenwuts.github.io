@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<title>EEG-Preprocessing</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+<a href="index.html">Return to Index</a>
+</p>
+
+<div id="EEG-Preprocessing"><h1 id="EEG-Preprocessing" class="header"><a href="#EEG-Preprocessing">EEG-Preprocessing</a></h1></div>
+<p>
+<a href="EEG.html">EEG</a> data preprocessing is generally highly specific to the data and the research project at hand. Much preprocessing will be performed using some form of signal processing, though many options exist. Much data preprocessing is aimed at the removal of <a href="EEG-Signal-Artifacts.html">signal artifacts</a>
+</p>
+
+<div id="EEG-Preprocessing-Preprocessing Examples"><h2 id="Preprocessing Examples" class="header"><a href="#EEG-Preprocessing-Preprocessing Examples">Preprocessing Examples</a></h2></div>
+<ul>
+<li>
+High-pass filter
+
+<li>
+Import channel locations
+
+<li>
+Reference EOG, EKG, EMG
+
+<li>
+Epoch data around important events
+
+<li>
+Subtract pre-stimulus baseline
+
+<li>
+Adjust marker values
+
+<li>
+Manual trial rejection
+
+<li>
+Mark bad electrodes
+
+<ul>
+<li>
+Identify any problematic electrodes that might be introducing artifacts to data. 
+
+</ul>
+<li>
+Average reference EEG channels
+
+<li>
+Run ICA to clean data
+
+<ul>
+<li>
+This can be a convenient way to isolate, identify, and remove artifacts in signals.
+
+<li>
+Note that "ideally you should only remove one component from your data, which should be the blink component"
+
+</ul>
+</ul>
+
+</body>
+</html>
