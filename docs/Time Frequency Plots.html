@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
+<title>Time Frequency Plots</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p>
+<a href="index.html">Return to Index</a>
+</p>
+
+<div id="Time Frequency Plots"><h1 id="Time Frequency Plots" class="header"><a href="#Time Frequency Plots">Time Frequency Plots</a></h1></div>
+
+<div id="Time Frequency Plots-Interpreting Time Frequency Plots"><h2 id="Interpreting Time Frequency Plots" class="header"><a href="#Time Frequency Plots-Interpreting Time Frequency Plots">Interpreting Time Frequency Plots</a></h2></div>
+
+<p>
+<img src="../../../mnt/c/Users/Admin/OneDrive - UTS/Student/2023 Sem 1/TRM/Study/wiki/images/timedomain.png" />
+</p>
+
+<p>
+Compare the signal to some sine wave and compute how "similar" they are (via some similarity metric) to produce the frequency on the left, which results in the following "static spectrum".
+</p>
+
+<p>
+<img src="../../../mnt/c/Users/Admin/OneDrive - UTS/Student/2023 Sem 1/TRM/Study/wiki/images/staticspectrum.png" />
+</p>
+
+<p>
+Hence we have transformed our data from the time domain to a frequency domain. The above spectrum is 'static' since it gives a static view of the frequency over time (i.e. the spectrum doesn't change with time). We can also include time in a "dynamic" spectrum, where "power" is shown through colour.
+</p>
+
+<p>
+<img src="../../../mnt/c/Users/Admin/OneDrive - UTS/Student/2023 Sem 1/TRM/Study/wiki/images/dynamicspectrum.png" />
+</p>
+
+<div id="Time Frequency Plots-What questions to ask when looking at time frequency data"><h2 id="What questions to ask when looking at time frequency data" class="header"><a href="#Time Frequency Plots-What questions to ask when looking at time frequency data">What questions to ask when looking at time frequency data</a></h2></div>
+
+<ol>
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Determine what is being shown in the plot."></span><strong id="Determine what is being shown in the plot.">Determine what is being shown in the plot.</strong> Power, connectivity, correlation with behavior, etc.
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Inspect the ranges and limits of the plot."></span><strong id="Inspect the ranges and limits of the plot.">Inspect the ranges and limits of the plot.</strong> What are the x- and y-axes? Color scale? Is activity cut off at the edges?
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Look at the results."></span><strong id="Look at the results.">Look at the results.</strong> Distributed or localised? Why only this electrode or time/frequency window?
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Link the results to the experiment design."></span><strong id="Link the results to the experiment design.">Link the results to the experiment design.</strong> What is time=0? Multiple task events?
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Understand the statistical procedures."></span><strong id="Understand the statistical procedures.">Understand the statistical procedures.</strong> Thresholding? Multiple comparisons addressed?  Exploratory?
+
+</ol>
+ 
+<div id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example"><h3 id="Example" class="header"><a href="#Time Frequency Plots-What questions to ask when looking at time frequency data-Example">Example</a></h3></div>
+<p>
+<img src="../../../mnt/c/Users/Admin/OneDrive - UTS/Student/2023 Sem 1/TRM/Study/wiki/images/tfeg.png" />
+</p>
+
+<ol>
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-What is being shown:"></span><strong id="What is being shown:">What is being shown:</strong> From the title we can see that the plot is a "dB-converted TF power plot"
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-Ranges and limits:"></span><strong id="Ranges and limits:">Ranges and limits:</strong> Symetric colour plot with 0 at green. Approximately 1.25 seconds of time represented in the time axis. Lowest frequency ~1Hz and top of 40Hz. 
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-Look at the results:"></span><strong id="Look at the results:">Look at the results:</strong> Looking for <span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-localised"></span><strong id="localised">localised</strong> vs. <span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-distributed"></span><strong id="distributed">distributed</strong> features (e.g. blue feature is distributed over time but localised over frequency; Red features are "band-limited" and very narrow in frequency range). Should also examine if any features are cut off by limits. 
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-Link the results to experiment design."></span><strong id="Link the results to experiment design.">Link the results to experiment design.</strong>
+
+<li>
+<span id="Time Frequency Plots-What questions to ask when looking at time frequency data-Example-Understand statistical procedures:"></span><strong id="Understand statistical procedures:">Understand statistical procedures:</strong> No evidence of statistical procedures used on plot. This means we need to be <em>qualitative</em> in analysis, since we can't be sure which features are noise vs. information.
+
+</ol>
+
+</body>
+</html>
