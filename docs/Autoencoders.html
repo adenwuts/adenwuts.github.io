@@ -32,10 +32,20 @@
 
     <div class="container">
 		
-<div id="Autoencoders"><h2 id="Autoencoders" class="header"><a href="#Autoencoders">Autoencoders</a></h2></div>
+<div id="Autoencoders"><h1 id="Autoencoders" class="header"><a href="#Autoencoders">Autoencoders</a></h1></div>
 <p>
 Autoencoders are a type of ANN used to learn efficient codings of unlabeled data. Autoencoders learn two functions: and encoding function \(h=f(\mathbf{x})\) that transforms the input data, and a decoding function \(r=g(\mathbf{h})\) that recreates the input data from the encoded representation (i.e. it attempts to copy its input to its output).
 The goal is not for the autoencoder to learn exact mappings (i.e. \(g(f(\mathbf{x}))=\mathbf{x}\)), but to learn an approximate model by prioritising which aspects of the input should be copied and thus (hopefully) learning the most useful properties of the data.
+</p>
+
+<p>
+Autoencoders can be trained in the same way as feed-forward neural networks, though may also be trained using <span id="Autoencoders-recirculation"></span><strong id="recirculation">recirculation</strong>. 
+</p>
+
+<div id="Autoencoders-Undercomplete Autoencoders"><h2 id="Undercomplete Autoencoders" class="header"><a href="#Autoencoders-Undercomplete Autoencoders">Undercomplete Autoencoders</a></h2></div>
+
+<p>
+Constraining the hidden layer \(\bf{h}\)
 </p>
 
     </div>
