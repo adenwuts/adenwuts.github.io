@@ -45,7 +45,11 @@ Autoencoders can be trained in the same way as feed-forward neural networks, tho
 <div id="Autoencoders-Undercomplete Autoencoders"><h2 id="Undercomplete Autoencoders" class="header"><a href="#Autoencoders-Undercomplete Autoencoders">Undercomplete Autoencoders</a></h2></div>
 
 <p>
-Constraining the hidden layer \(\bf{h}\)
+Constraining the hidden layer \(\bf{h}\) of an autoencoder to be of lower dimension than some input \(\bf{x}\) forces the autoencoder to learn the most important features of the input data. When the dimensions of the hidden layer are smaller than that of the input, the autoencoder is referred to as <span id="Autoencoders-Undercomplete Autoencoders-undercomplete"></span><strong id="undercomplete">undercomplete</strong>.
+</p>
+
+<p>
+The learning process is described simply as minimising a loss function $\( L (\bf{x}, g(f(\mathbf{x}))) \)$.
 </p>
 
     </div>
