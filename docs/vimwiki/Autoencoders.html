@@ -32,8 +32,8 @@
 		
 <div id="Autoencoders"><h1 id="Autoencoders" class="header"><a href="#Autoencoders">Autoencoders</a></h1></div>
 <p>
-Autoencoders are a type of ANN used to learn efficient codings of unlabeled data. Autoencoders learn two functions: and encoding function \(h=f(\mathbf{x})\) that transforms the input data, and a decoding function \(r=g(\mathbf{h})\) that recreates the input data from the encoded representation (i.e. it attempts to copy its input to its output).
-The goal is not for the autoencoder to learn exact mappings (i.e. \(g(f(\mathbf{x}))=\mathbf{x}\)), but to learn an approximate model by prioritising which aspects of the input should be copied and thus (hopefully) learning the most useful properties of the data.
+Autoencoders are a type of ANN used to learn efficient codings of unlabeled data. Autoencoders learn two functions: and encoding function \(h=f(\boldsymbol{x})\) that transforms the input data, and a decoding function \(r=g(\boldsymbol{h})\) that recreates the input data from the encoded representation (i.e. it attempts to copy its input to its output).
+The goal is not for the autoencoder to learn exact mappings (i.e. \(g(f(\boldsymbol{x}))=\boldsymbol{x}\)), but to learn an approximate model by prioritising which aspects of the input should be copied and thus (hopefully) learning the most useful properties of the data.
 </p>
 
 <p>
@@ -43,11 +43,15 @@ Autoencoders can be trained in the same way as feed-forward neural networks, tho
 <div id="Autoencoders-Undercomplete Autoencoders"><h2 id="Undercomplete Autoencoders" class="header"><a href="#Autoencoders-Undercomplete Autoencoders">Undercomplete Autoencoders</a></h2></div>
 
 <p>
-Constraining the hidden layer \(\bf{h}\) of an autoencoder to be of lower dimension than some input \(\bf{x}\) forces the autoencoder to learn the most important features of the input data. When the dimensions of the hidden layer are smaller than that of the input, the autoencoder is referred to as <span id="Autoencoders-Undercomplete Autoencoders-undercomplete"></span><strong id="undercomplete">undercomplete</strong>.
+Constraining the hidden layer \(\boldsymbol{h}\) of an autoencoder to be of lower dimension than some input \(\boldsymbol{x}\) forces the autoencoder to learn the most important features of the input data. When the dimensions of the hidden layer are smaller than that of the input, the autoencoder is referred to as <span id="Autoencoders-Undercomplete Autoencoders-undercomplete"></span><strong id="undercomplete">undercomplete</strong>.
 </p>
 
 <p>
-The learning process is described simply as minimising a loss function \(L (\bf{x}, g(f(\mathbf{x})))\), where \(L\) is a loss function penalizing \(g(f(\bf{x}))\) for being dissimilar from \(\mathbf{x}\), such as the mean squared error.
+The learning process is described simply as minimising a loss function \(L (\boldsymbol{x}, g(f(\boldsymbol{x})))\), where \(L\) is a loss function penalizing \(g(f(\boldsymbol{x}))\) for being dissimilar from \(\boldsymbol{x}\), such as the mean squared error.
+</p>
+
+<p>
+Over-fitting is especially problematic 
 </p>
 
 <div id="Autoencoders-External Links"><h2 id="External Links" class="header"><a href="#Autoencoders-External Links">External Links</a></h2></div>
