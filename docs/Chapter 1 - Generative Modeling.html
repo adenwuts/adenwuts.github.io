@@ -78,19 +78,22 @@ Representation - It should be possible to understand how different high-level fe
 <p>
 Different types of generative models take different approaches to modelling the density function \(p_\theta(\mathbf{x})\):
 </p>
-<ul>
+<ol>
 <li>
-Test
+Explicitly model \(p_\theta(\mathbf{x})\) but constrain the model so that the density function is tractable.
 
-</ul>
+<li>
+Explicitly model a tractable approximation of \(p_\theta(\mathbf{x})\).
+
+<li>
+Implicitly model the density function through a stochastic process that directly generates data.
+
+</ol>
+<p>
+_<em>Implicit density models</em>_ 
+</p>
 
     </div>
-
-    <footer class="page-footer font-small stylish-color-dark fixed-bottom">
-      <div class="footer-copyright text-right py-2">
-        <a style="margin-left: 10px;" href="mailto:aden.northcote@gmail.com">Aden Northcote</a>
-      </div>
-    </footer>
 
 </body>
 </html>
