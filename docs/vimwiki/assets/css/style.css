@@ -51,3 +51,6 @@ a:hover, a:focus, a:active, a:visited, a:link{
     text-decoration: none;
 }
 
+a[href^='#'] {
+  color: #495057;
+}
