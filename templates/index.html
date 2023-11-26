@@ -38,12 +38,16 @@
     <p>The <a href="vimwiki/wikiindex.html">Wiki</a> contains study notes.</p>
     <p>Built with Python, Jinja2, Vimwiki, Github.</p>
     <h3>Changes</h3>
-    <ul>
+    <table class="table table-borderless">
+      <tbody>
     {% for rc in recent_commits %}
-      <li>{{ rc.0 }} - {{ rc.1 }}</li>
+        <tr>
+          <td>{{ rc.0 }}</td>
+          <td>{{ rc.1 }}</td>
+        </tr>
     {% endfor %}
-    </ul>
-
+      </tbody>
+    </table>
 
     </div>
 
