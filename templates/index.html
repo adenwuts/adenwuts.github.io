@@ -41,7 +41,7 @@
     <h1>Changes</h1>
     <ul>
     {% for rc in recent_commits %}
-      <li>{{ rc }}</li>
+      <li>{{ rc.0 }} - {{ r.1 }}</li>
     {% endfor %}
     </ul>
 
