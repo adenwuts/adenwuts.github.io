@@ -54,3 +54,18 @@ a:hover, a:focus, a:active, a:visited, a:link{
 a[href^='#'] {
   color: red;
 }
+
+.table-borderless,
+.table-borderless > tbody > tr > td,
+.table-borderless > tbody > tr > th,
+.table-borderless > tfoot > tr > td,
+.table-borderless > tfoot > tr > th,
+.table-borderless > thead > tr > td,
+.table-borderless > thead > tr > th {
+    border: none;
+    pointer-events: none;
+    border-style: hidden;
+    box-shadow: none;
+    font-size: inherit;
+    
+}

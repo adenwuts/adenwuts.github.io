@@ -27,7 +27,7 @@ recent_commits = [
 
 environment = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
 template = environment.get_template("index.html")
-output = template.render(recent_commits=recent_commits)
+output = template.render(changes=recent_commits)
 
 with open(SITE_DIR / "index.html", "w") as f:
     f.write(output)
