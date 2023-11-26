@@ -26,6 +26,8 @@ jobs:
           done
       - name: Build
         uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./docs
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v2
   deploy:
