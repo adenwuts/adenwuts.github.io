@@ -1,5 +1,5 @@
 name: Publish Pages
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: Publish Pages
 on: [push]
 jobs:
   build:
