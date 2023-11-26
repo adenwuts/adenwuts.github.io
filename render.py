@@ -7,6 +7,7 @@ import os
 
 GITHUB_TOKEN = os.environ["PAGES_COMMIT_TOKEN"]
 TEMPLATES_DIR = Path(__file__).parent / "templates"
+SITE_DIR = Path(__file__).parent / "docs"
 
 headers = {
     "Accept": "application/vnd.github+json",
@@ -27,4 +28,6 @@ recent_commits = [
 environment = Environment(loader=FileSystemLoader(TEMPLATES_DIR))
 template = environment.get_template("index.html")
 output = template.render(recent_commits=recent_commits)
-print(output)
+
+with open(SITE_DIR / "index.html", "w") as f:
+    f.write(output)
