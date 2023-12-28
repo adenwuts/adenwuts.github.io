@@ -63,7 +63,8 @@ int main (int argc, char *argv[]) {
         args = (char **)malloc(NUMARGS * sizeof(char *));
         args[0] = "/path/to/exec";
         execvp(args[0], args);
-        perror(execvp);
+        perror("execvp");
+        free(args);
     } else {
         /* else if we're running in the parent, wait for the child to close */
         waitpid(childpid, &amp;status, 0);
