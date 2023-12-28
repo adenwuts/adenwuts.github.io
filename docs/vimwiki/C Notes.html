@@ -30,25 +30,48 @@
 
     <div class="container my-3">
 		
-<div id="Principal Component Analysis (PCA)"><h1 id="Principal Component Analysis (PCA)" class="header"><a href="#Principal Component Analysis (PCA)">Principal Component Analysis (PCA)</a></h1></div>
+<div id="Basic"><h1 id="Basic" class="header"><a href="#Basic">Basic</a></h1></div>
 
-<p>
-PCA is a statistical technique for reducing dimensionality of data while retaining a quantifiable portion of the original variation.
-</p>
+<div id="Basic-Forking"><h2 id="Forking" class="header"><a href="#Basic-Forking">Forking</a></h2></div>
 
-<p>
-\(x=y\tag{1}\)
-</p>
+<pre>
+#include &lt;unistd.h&gt; /* execvp */
+#include &lt;stdio.h&gt; /* perror */
+#include &lt;sys/types.h&gt; /* pid_t */
+#include &lt;sys/wait.h&gt; /* waitpid */
 
-<div id="Principal Component Analysis (PCA)-External Links"><h2 id="External Links" class="header"><a href="#Principal Component Analysis (PCA)-External Links">External Links</a></h2></div>
-<ul>
-<li>
-<a href="https://setosa.io/ev/principal-component-analysis/">Principal Component Analysis Explained Visually</a>
+#define NUMARGS 80
 
-<li>
-<a href="https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch18.pdf">Principal Components Analysis</a>
+int main (int argc, char *argv[]) {
 
-</ul>
+    pid_t childpid;
+    int status = 0;
+
+    /*
+      fork() returns the PID of the child process in the parent,
+      and 0 in the child. On failure, -1 is returned in the parent.
+    */
+    
+    if ((childpid = fork()) == -1) {
+        perror("fork");
+        exit(1);
+    }
+
+    /* Check if we're running in the child process */
+    if (childpid == 0) {
+        char **args = NULL;
+        args = (char **)malloc(NUMARGS * sizeof(char *));
+        args[0] = "/path/to/exec";
+        execvp(args[0], args);
+        perror(execvp);
+    } else {
+        /* else if we're running in the parent, wait for the child to close */
+        waitpid(childpid, &amp;status, 0);
+    }
+
+    return 0;
+}
+</pre>
 
     </div>
 <!-- Footer -->
